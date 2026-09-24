@@ -3,27 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAYA App Support</title>
+
+    <title>Support</title>
+    <meta name="description" content="Contact support">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "SF Pro Display",
+                "SF Pro Text",
+                Inter,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    #ffffff 0%,
+                    #f5f5f7 45%,
+                    #eeeeef 100%
+                );
+
+            color: #111111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            border-radius: 28px;
+
+            padding: 42px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111111;
+            color: white;
+
+            border-radius: 15px;
+            font-size: 23px;
+
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 34px;
+            line-height: 1.1;
+            letter-spacing: -1.2px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            margin: 0 0 32px;
+            color: #6e6e73;
+            font-size: 16px;
+            line-height: 1.55;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+
+            font-size: 13px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            border: 1px solid #dedee2;
+            border-radius: 13px;
+
+            background: #ffffff;
+
+            padding: 14px 15px;
+
+            font-family: inherit;
+            font-size: 15px;
+            color: #111111;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        textarea {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #a1a1a6;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #111111;
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+        }
+
+        button {
+            width: 100%;
+            height: 52px;
+
+            border: 0;
+            border-radius: 13px;
+
+            background: #111111;
+            color: #ffffff;
+
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.15s ease,
+                opacity 0.15s ease;
+        }
+
+        button:hover {
+            opacity: 0.88;
+        }
+
+        button:active {
+            transform: scale(0.985);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 22px;
+
+            color: #8e8e93;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+
+            .card {
+                padding: 28px 22px;
+                border-radius: 22px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>App Support</h1>
 
-    <p>
-        If you have any questions, encounter a problem,
-        or would like to send feedback, please contact us.
-    </p>
+<div class="container">
 
-    <h2>Contact</h2>
+    <div class="card">
 
-    <p>
-        Email:
-        <a href="mailto:rzhaishylyk@gmail.com">
-            rzhaishylyk@gmail.com
-        </a>
-    </p>
+        <div class="icon">?</div>
 
-    <p>
-        We welcome questions, bug reports, and feature requests.
-    </p>
+        <h1>How can we help?</h1>
+
+        <p class="subtitle">
+            Have a question, found a problem, or want to send feedback?
+            Send us a message and we'll get back to you.
+        </p>
+
+        <!--
+            IMPORTANT:
+            Replace YOUR_EMAIL@example.com below with your email.
+        -->
+
+        <form
+            action="https://formsubmit.co/YOUR_EMAIL@example.com"
+            method="POST"
+        >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Support Request"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <div class="field">
+                <label for="name">Name</label>
+
+                <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us how we can help..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit">
+                Send message
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="footer">
+        Support
+    </div>
+
+</div>
+
 </body>
 </html>
